@@ -83,7 +83,8 @@ def main():
     print("Welcome to the Outdoor Park Concert App!")
     print_seating()
 
-    while True:
+    running = True
+    while running:
         choice = input("\nMenu: [V]iew seating, [B]uy ticket(s), [S]earch by name, [D]isplay purchases, [Q]uit: ").upper()
         if choice == 'V':
             print_seating()
@@ -96,7 +97,7 @@ def main():
             display_purchases()
         elif choice == 'Q':
             print("Thank you for using the Outdoor Park Concert App!")
-            break
+            running = False
         else:
             print("Invalid choice. Please try again.")
 
