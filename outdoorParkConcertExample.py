@@ -22,7 +22,7 @@ def print_seating():
     for i, row in enumerate(seats):
         print(f"{i+1:2d} {' '.join(row)}")
 
-# Function to purchase tickets
+# Function to purchase tickets and price
 def purchase_tickets(row, col, num_tickets, ticket_type):
     if any(seats[row][col+i] != SEAT_AVAILABLE for i in range(num_tickets)):
         return False, "One or more seats already occupied."
